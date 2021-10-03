@@ -4,4 +4,4 @@ Na pasta **Aulas assíncronas** você encontrará os exercícios propostos nas a
 
 Na pasta **Desafios** estão os desafios realizados durante o bootcamp.
 
-Na pasta Aula ao vivo estão os exercícios realizados durante as aulas ao vivo do bootcamp.
+Na pasta **Aulas ao vivo** estão os exercícios realizados durante as aulas semanais síncronas do bootcamp.
