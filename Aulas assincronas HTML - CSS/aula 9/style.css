@@ -1,0 +1,14 @@
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+#content_img {
+  width: 800px;
+  height: 600px;
+  border: 1px solid black;
+  background-size: 25%;
+  background-repeat: repeat-y;
+  background-image: url(img/culinaria.jpg);
+}

@@ -1,0 +1,210 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.paleta {
+  color: #e53935;
+  color: #2e7d32;
+  color: #434f55;
+  color: #cfd8dc;
+}
+
+:root {
+  --cor-border-geral: #cfd8dc;
+  --cor-padrao-fonte: #434f55;
+  font-size: 100%;
+  --font-padrao: Helvetica, Arial;
+  --font-cor-titulo: #e53935;
+}
+
+body{
+  background-color: rgb(228, 224, 220);
+}
+
+.flex {
+  display: flex;
+}
+
+a {
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-family: var(--font-padrao);
+  color: #fcfcfc;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.icons-list {
+  margin-right: 2px;
+  font-size: 1.5rem;
+}
+
+a.go:hover {
+  background-color: var(--font-cor-titulo);
+  color: #fff;
+  transition: 1s;
+}
+
+header,
+main,
+footer {
+  width: 80%;
+  margin: auto;
+}
+
+header {
+  background: linear-gradient(to right, rgb(41, 41, 41), rgb(0, 0, 0));
+  position: fixed;
+  top:0;
+  left:0;
+  width: 100%;
+}
+
+header#top-header {
+  height: 80px;
+  border-bottom: 1px solid var(--cor-border-geral);
+}
+
+
+header#top-header h1,
+header#top-header nav {
+  width: 50%;
+}
+
+header#top-header h1 {
+  color:#fff;
+  /* font-family: var(--font-padrao); */
+  align-items: center;
+  font-size: clamp(1.5rem, 2vh, 2.5rem);
+  margin-left: 10%;
+}
+
+span {
+  color: green;
+
+}
+
+span.pizzaria{
+  color:#e53935;
+}
+
+header#top-header nav#menu ul#list-menu {
+  width: 100%;
+  justify-content: flex-end;
+}
+
+nav#menu ul#list-menu li.item {
+  width: 130px;
+  justify-content: center;
+  align-items: center;
+}
+
+section#section-cards {
+  width: 100%;
+  height: 100%;
+  margin-top: 100px;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap:20px;
+  margin-bottom: 100px;
+}
+
+div.card {
+  width: 320px;
+  height: auto;
+  background: hsla(0, 0%, 100%, 0.693);
+  flex-grow: 1;
+  padding: 20px;
+}
+
+section#section-cards div.card figure.card-img-pizza {
+  width: 100%;
+  padding: 2px;
+}
+
+section#section-cards div.card figure.card-img-pizza img.img-pizza {
+  width: 100%;
+}
+
+.formTamanhoPizza {
+  align-items: center;
+  justify-content: center;
+}
+
+label {
+  width: 30px;
+  flex-direction: column;
+  align-items: center;
+  padding: 2px;
+  cursor: pointer;
+}
+
+h2 {
+  text-align: center;
+  padding: 10px 0 10px 0;
+}
+
+.btn {
+  color:#fff;
+  background-color: #2e7d32;
+  border: none;
+  padding: 10px 40px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.btn:hover{
+  background-color:var(--font-cor-titulo);
+  transition: 0.2s;
+}
+
+.center {
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.card:hover {
+  box-shadow: 2px 2px 10px rgb(63, 63, 63, 0.6);
+  transition: 0.3s;
+}
+
+p{
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+footer {
+  text-align: center;
+  bottom: 0px;
+  left: 0px;
+  height: 200px;
+  width: 100%;
+  background: rgb(41, 41, 41);
+  color: ghostwhite;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+
+footer h3 {
+  margin-bottom: 3px;
+}
+i.fa-instagram,i.fa-facebook,i.fa-twitter {
+  padding: 5px 20px;
+  font-size: 1.5rem;
+}
+
+footer a:hover {
+  color: #e53935;
+}
+
+i:hover {
+  color: #e53935;
+}
