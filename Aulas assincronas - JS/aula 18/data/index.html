@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<script>
+
+  let data = new Date();
+  console.log(data.getDate())
+  console.log(data.getMonth())
+  console.log(data.getDay()) //Dia da semana. Retorna a posição num array
+
+  let dataFormatada = data.toLocaleString('pt-br', {year:'numeric', month:'2-digit', day:'2-digit'});
+  console.log(dataFormatada)
+</script>
+<body>
+  
+</body>
+</html>

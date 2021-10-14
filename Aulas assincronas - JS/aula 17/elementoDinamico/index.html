@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<script>
+  window.onload = function() {
+    
+    let produtos = [
+      {descricao:'Biscoito', preco:2.20},
+      {descricao:'Marmelada', preco: 1.99},
+      {descricao:'Sabonete', preco: 2.10}
+    ]
+
+    const listaProdutos = document.querySelector("#listaProdutos");
+    const total = document.querySelector("#total");
+
+    (()=>{
+      let totalzinho = 0;
+      for ( let pro of produtos ) {
+
+        const filhoLi = document.createElement('li')
+
+        for(listaP in pro) {
+          if (listaP == 'preco') {
+            listaProdutos.appendChild(filhoLi).setAttribute('data-preco', pro[listaP])
+            totalzinho += pro[listaP]
+          } else {
+          listaProdutos.appendChild(filhoLi).textContent = `${pro[listaP]}`
+        }
+      
+      }
+
+      }
+
+      total.value = totalzinho.toFixed(2)
+
+    })()
+
+  }
+
+</script>
+<body>
+  <ul id="listaProdutos">
+
+
+  </ul>
+
+  <input type="text" name="" id="total" value="">
+
+</body>
+</html>

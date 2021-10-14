@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<script>
+
+  window.onload = () => {
+    let number1 = document.querySelector('#num1');
+    let number2 = document.querySelector('#num2');
+    let total = document.querySelector('#total');
+
+    number2.addEventListener('blur', () => {
+      total.value = Number(number2.value) + Number(number1.value);
+    })
+  }
+
+</script>
+<body>
+
+  <input type="number" name="" id="num1">
+  <input type="number" name="" id="num2">
+  <input type="text" name="" id="total" disabled>
+
+</body>
+</html>

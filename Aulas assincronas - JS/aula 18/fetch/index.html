@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <script>
+    window.onload = function () {
+
+      function resultadoCep(dadosCep) {
+
+        for( let campo in dadosCep) {
+
+          if(document.querySelector(`#${campo}`)) {
+            document.querySelector(`#${campo}`).value = dadosCep[campo]
+          }
+
+        }
+
+      }
+
+
+      let dadosCep = async function(cep){
+        let url = `https://viacep.com.br/ws/${cep}/json`
+        try {
+          let dadosFetch = await fetch(url);
+
+          let dadosJson = await dadosFetch.json()
+          resultadoCep(dadosJson);
+        } catch (error) {
+          alert(error);
+        }
+      }
+      //dadosCep('87025000')
+      const btnBuscar = document.querySelector('#buscarCep')
+      const CEP_ = document.querySelector('#numeroCep')
+
+      btnBuscar.addEventListener('click', () => {
+        dadosCep(CEP_.value);
+      })
+    }
+  </script>
+  <body>
+    <input
+      type="text"
+      name=""
+      id="numeroCep"
+      placeholder="Digite um CEP válido"
+    />
+    <input type="text" name="" id="logradouro" />
+    <input type="button" name="buscar" id="buscarCep" value="BUSCAR" />
+  </body>
+</html>

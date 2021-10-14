@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script>
+
+     let frutas = [
+       {
+         nome:'Maçã',
+         preco: '2.99'
+       },
+       {
+        nome: 'Banana',
+        preco:'1.99'
+       },
+       {
+        nome: 'Melancia',
+        preco:'0.99'
+      }
+     ]
+
+     function retorna(exemplo){
+       let total = 0
+       for (let fruta of exemplo) {
+        total += Number(fruta.preco)
+        for (let i in fruta) {
+          console.log(`${i} - > ${fruta[i]}`)
+        }
+       }
+       console.log(`O valor total da compra é de ${total.toFixed(2)}`)
+     }
+
+     retorna(frutas)
+  </script>
+</head>
+<body>
+  
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script>
+    
+    function Pessoa(nome){
+      this.nome = nome
+      // this.msg = function(){
+      //   alert('Olá')
+      // }
+    }
+
+    Pessoa.prototype.msg = function() {
+      alert("Olá"+ this.nome)
+    }
+    let NovaPessoa = new Pessoa('José')
+    console.log(NovaPessoa)
+
+
+
+    //segunda forma de criar objetos:
+    let Pessoa2 = {
+      'nome' : '',
+      'idade' : ''
+    }
+
+    Pessoa2.__proto__.msg = function() {
+      alert('Olá ' + Pessoa2.nome)
+    }
+
+    let P = Pessoa2
+    P.nome = 'Dayane'
+    P.msg()
+    consoloe.log(P)
+
+  </script>
+</head>
+<body>
+  
+</body>
+</html>

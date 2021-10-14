@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<script>
+  //m: inteiro, não negativo, não decimal
+  let m = 1
+  try {
+    if(typeof m != 'number') {
+      throw new Error("Digite um número")
+    }
+    if( m < 0) throw new Error("O número não pode ser negativo");
+    if( m % 1 !== 0) throw new Error("Digite um número inteiro")
+  }catch(erro) {
+    console.log(`O erro é:.. ${erro}`)
+  } finally {
+    console.log("Operação Realizada")
+  }
+
+</script>
+<body>
+  
+</body>
+</html>

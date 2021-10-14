@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<script>
+  window.onload = () => {
+
+    let veiculos = ["onibus", "motocicleta", "patinete"]
+
+    let btn = document.querySelector("#btn")
+    let lista = document.querySelector("#listaDinamica")
+
+    btn.addEventListener('click', () => {
+      lista.innerHTML = ''
+      
+      for (tipo of veiculos) { 
+        let li = document.createElement('li');
+        lista.appendChild(li).textContent = tipo;
+      }
+    })
+
+  }
+
+</script>
+<body>
+  <ol id="listaDinamica">
+
+  </ol>
+
+  <input type="button" value="CRIAR" id="btn">
+</body>
+</html>

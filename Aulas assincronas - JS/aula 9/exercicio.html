@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      // let i = 0
+      // while (i < qtNovosNomes) {
+      //   nome = prompt('Digite o novo nome:')
+      //   nomes.push(nome)
+      //   i++
+      // }
+
+      nomes = ['Ana', 'Maria', 'Clara', 'Pedro', 'Paulo']
+
+      function funcao(array, nome, posicao){
+        document.write(`Quantidade de elementos do array...: ${array.length} <br>`)
+        
+        array.push(nome)
+        
+        if (posicao >= 0 && posicao <= array.length) {
+          document.write(`Você escolheu o índice ${posicao} que é o elemento ${array[posicao]}<br>`)
+        }
+        else {
+          alert("Posição inválida!")
+        }
+        
+        document.write(`A quantidade atual de elementos do array é de...:${array.length}`)
+      }
+
+      funcao(nomes, 'Dayane', 20)
+
+    </script>
+  </head>
+  <body></body>
+</html>

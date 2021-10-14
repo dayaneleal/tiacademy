@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      // let Pessoas = {
+      //   nome: 'Steven Rogers',
+      //   idade: '36',
+      //   heroi: 'Capitão América'
+      // }
+
+      // for (let key in Pessoas) {
+      //   console.log(key)
+      // }
+
+      // let frutas = ['Melancia', 'Pera', 'Maçã', 'Banana']
+
+      // for (let nomeFruta of frutas) {
+      //   console.log(nomeFruta)
+      // }
+
+
+      let Herois = [{
+        identidade: 'Steven Rogers',
+        heroi:'Capitão América'
+      },
+
+      {
+        identidade: 'Tony Stark',
+        heroi: 'Homem de Ferro'
+      }
+    ];
+
+    let marvel = Herois[1].identidade
+    console.log(marvel)
+
+    for(let marvel of Herois) {
+      for(let m in marvel){
+        console.log(`${m} -> ${marvel[m]}`)
+      }
+    }
+    </script>
+  </head>
+  <body></body>
+</html>

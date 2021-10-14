@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      let peso = Number(prompt('Digite o seu Peso:'))
+      let altura = Number(prompt('Digite a sua Altura:'))
+      let nome = prompt('Digite o seu Nome:')
+
+      let caracteristicas = (altura, peso, nome) => {
+        let imc = Math.round(peso / (altura * altura));
+
+        document.write(`Nome: ${nome} <br> Altura: ${altura} <br> Peso: ${peso} <br> IMC: ${imc}`)
+      }
+
+      caracteristicas(altura, peso, nome)
+    </script>
+  </head>
+  <body></body>
+</html>

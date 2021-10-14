@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <script>
+    // alert("Olá mundo!")
+    // prompt("Digite um valor")
+    // confirm("Clique em um botão")
+
+    // var nome = prompt('Digite seu nome: ')
+    // var cor = prompt('Qual sua cor favorita ' + nome)
+
+    // document.write('Nome : ' + nome + '<br>')
+    // document.write('A cor favorita de ' + nome + ' é ' + cor)
+
+    // if (confirm("Clique em um botão")) {
+    //   document.write("Você clicou em Ok")
+    // } else {
+    //   console.log("Você clicou em Cancelar")
+    // }
+
+    var valor = parseInt(prompt('Digite um valor'))
+
+    switch (valor) {
+      case 1:
+        var pergunta = confirm('Você pretende continuar a operação')
+        if (pergunta) {
+          alert('Parabéns, você está ficando bom')
+        } else {
+          alert('Poxa vida, você precisa melhorar')
+        }
+        break
+      case 2:
+        alert('Olá')
+        break
+      default:
+        alert('Tchau')
+    }
+  </script>
+  <body></body>
+</html>

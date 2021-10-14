@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script>
+
+    let transformacao = (string) => {
+      document.write(`Essa palavra tem ${string.length} caracteres <br>`)
+      document.write(`A palavra ${string} ficou ${string.toUpperCase()} <br>`)
+      document.write(`A letra ${string[2]} é o terceiro caracter da palavra ${string.toUpperCase()} <br>`)
+      document.write(`${string.toUpperCase()} ficou ${string.replace(string[2], 'X').toUpperCase()} <br>`)
+    }
+
+    transformacao('dayane')
+  </script>
+</head>
+<body>
+  
+</body>
+</html>
