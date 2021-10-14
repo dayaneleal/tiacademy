@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Desafio II</title>
+    <link rel="stylesheet" href="style2.css" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <script type="module" src="script.js"></script>
+  </head>
+  <body>
+    <header>
+      <h1>ME ACHA!</h1>
+      <h2>ENCONTRE UM ENDEREÇO PELO NÚMERO DE CEP</h2>
+      <i class="material-icons custom"> travel_explore </i>
+    </header>
+    <main>
+      <form method="get">
+        <label for="cep">Cep</label>
+        <input type="text" name="cep" id="cep" placeholder="Informe o CEP desejado" />
+        <label for="rua">Rua</label>
+        <input type="text" name="rua" id="logradouro" disabled />
+        <label for="bairro">Bairro</label>
+        <input type="text" name="bairro" id="bairro" disabled />
+        <label for="cidade">Cidade</label>
+        <input type="text" name="cidade" id="localidade" disabled />
+        <label for="estado">Estado</label>
+        <input type="text" name="estado" id="uf" disabled />
+        <input type="button" id="btn" value="BUSCAR" />
+      </form>
+    </main>
+  </body>
+</html>
