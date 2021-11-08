@@ -224,14 +224,25 @@ app.get('/listaitemcompra', async (req, res) => {
     })
 })
 
+
+
 //LISTAR PEDIDO POR ID
 app.get('/pedidos/:id', async (req, res) => {
   await pedido
-    .findByPk(req.params.id, { include: [{ all: true }] })
+    .findByPk(req.params.id)
     .then(ped => {
-      return res.json({ ped })
-    })
+      return res.json({ 
+        error: false,
+        ped
+    });
+}).catch(erro => {
+  return res.status(400).json({
+    error:true,
+    message: "Erro: não foi possível acessar a API"
+  })
 })
+})
+
 
 //EDITAR ITEM POR ID
 app.put('/pedidos/:id/editaritem', async (req, res) => {
@@ -274,14 +285,110 @@ app.put('/pedidos/:id/editaritem', async (req, res) => {
     })
 })
 
+
+//EDITAR PEDIDO 
+
+app.put('/pedido/:id', async (req, res) => {
+  const ped = {
+      id: req.params.id,
+      ClienteId: req.body.ClienteId,
+      data: req.body.data
+  };
+
+  if (!await cliente.findByPk(req.body.ClienteId)){
+      return res.status(400).json({
+          error: true,
+          message: 'Cliente não existe.'
+      });
+  };
+
+  await pedido.update(ped,{
+      where: Sequelize.and({ClienteId: req.body.ClienteId},
+          {id: req.params.id})
+  }).then(pedidos=>{
+      return res.json({
+          error: false,
+          mensagem: 'Pedido foi alterado com sucesso.',
+          pedidos
+      });
+  }).catch(erro=>{
+      return res.status(400).json({
+          error: true,
+          message: "Erro: não foi possível alterar."
+      });
+  });
+});
+
+
 //UTILIZADO PARA ENCONTRAR UM SERVIÇO POR ID
-app.get('/servico/:id', async (req, res) => {
-  await servico
-    .findByPk(req.params.id)
-    .then(serv => {
+app.get('/servico/:id/pedidos', async (req, res) => {
+  await itempedido
+    .findAll({
+      where: { ServicoId: req.params.id }
+    })
+    .then(item => {
       return res.json({
         error: false,
-        serv
+        item
+      })
+    })
+    .catch(function (erro) {
+      return res.status(400).json({
+        error: true,
+        message: 'Erro: Não foi possível fazer a conexão!'
+      })
+    })
+})
+
+app.get('/produto/:id/compras', async (req, res) => {
+  await itemcompra
+    .findAll({
+      where: { ProdutoId: req.params.id }
+    })
+    .then(item => {
+      return res.json({
+        error: false,
+        item
+      })
+    })
+    .catch(function (erro) {
+      return res.status(400).json({
+        error: true,
+        message: 'Erro: Não foi possível fazer a conexão!'
+      })
+    })
+})
+
+
+app.get('/cliente/:id/pedido', async (req, res) => {
+  await pedido
+    .findAll({
+      where: { ClienteId: req.params.id }
+    })
+    .then(item => {
+      return res.json({
+        error: false,
+        item
+      })
+    })
+    .catch(function (erro) {
+      return res.status(400).json({
+        error: true,
+        message: 'Erro: Não foi possível fazer a conexão!'
+      })
+    })
+})
+
+
+app.get('/cliente/:id/compra', async (req, res) => {
+  await compra
+    .findAll({
+      where: { ClienteId: req.params.id }
+    })
+    .then(item => {
+      return res.json({
+        error: false,
+        item
       })
     })
     .catch(function (erro) {
